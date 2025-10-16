@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portafolio con Bootstrap– Amancay Ramírez</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> 
+
+    <style>
+
+
+    
+      .thumb {
+        width: 100%; 
+        height: 255px;    
+        object-fit: cover;  
+        display: block;          }
+    </style>
+  </head>
+
+  <body>
+    
+    <header class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container"> 
+        <span class="navbar-brand mb-0 h1">Portafolio Kai</span>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+   
+    <div class="collapse navbar-collapse justify-content-end" id="menuNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#portafolio">Portafolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      </div>
+    </header>
+
+    <!-- Intro -->
+    <main>
+      <section class="py-5 text-center container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <h1 class="fw-light">Amancay Ramírez</h1>
+            <p class="lead text-body-secondary">
+              Algunos proyectos destacados dentro de mi experiencia como diseñadora. 
+            </p>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="album py-4 bg-body-tertiary">
+        <div class="container">
+          <div id="show" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"></div> 
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-body-secondary py-4">
+            <div class="container">
+                <p class="float-end mb-1"><a href="#">Vuelve al comienzo</a></p>
+        <small>© 2025 Amancay Ramírez</small>
+      </div>
+    </footer>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <script>
+      const trabajos = [
+        {
+          nombre: "UX/UI",
+          categoria: "Interfaz para app de ejercicio",
+          imagen: "images/10.png"
+        },
+        {
+          nombre: "Branding",
+          categoria: "Identidad de marca - cafetería",
+          imagen: "images/1.png"
+        },
+        {
+          nombre: "Llaca chilena",
+          categoria: "Ilustración para academia",
+          imagen: "images/5.png"
+        },
+        {
+          nombre: "Salas de música",
+          categoria: "Rediseño de espacio",
+          imagen: "images/3.png"
+        },
+        {
+          nombre: "Shoenstatt Chile",
+          categoria: "Logotipo para movimiento católico",
+          imagen: "images/9.png"
+        },
+        {
+          nombre: "¡Conocenos!",
+          categoria: "Prototipo de página web",
+          imagen: "images/4.png"
+        },
+         {
+          nombre: "Cafetería Baume",
+          categoria: "Prototipo de página web",
+          imagen: "images/11.png"
+        },
+        {
+          nombre: "Sufikotoshokureto",
+          categoria: "Packaging de bombones",
+          imagen: "images/2.png"
+        },
+         {
+          nombre: "Visuales",
+          categoria: "Portadas en movimiento de concierto",
+          imagen: "images/12.png"
+        }
+      ];
+
+      const portfolioGrilla = document.getElementById("show");
+
+      trabajos.forEach(t => {
+
+        portfolioGrilla.innerHTML += `
+          <div class="col">
+            <div class="card shadow-sm h-100">
+              <img src="${t.imagen}" alt="${t.nombre}" class="card-img-top thumb">
+              <div class="card-body">
+                <p class="card-text mb-1"><strong>${t.nombre}</strong></p>
+                <p class="card-text text-body-secondary mb-0">${t.categoria}</p>
+              </div>
+            </div>
+          </div>`;
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
